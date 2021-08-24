@@ -1,0 +1,71 @@
+{% extends 'vacancy/base.html' %}
+{% load static%}
+
+{% block content %}
+<div class="container card">
+    <h1>Candidates applied</h1>
+    <div class="card-body">
+        <table class="table table-hover">
+            <tr>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Cover Letter</th>
+                <th>Resume</th>
+                <th>PhD</th>
+                <th>MSc</th>
+                <th>BSc</th>
+                <th>Other Documents</th>
+            </tr>
+            {% for c in employees %}
+                <tr>
+                    <td>{{c.name}}</td>
+                    <td>{{c.dob}}</td>
+                    <th>{{c.gender}}</th>
+                    <th>{{c.phone}}</th>
+                    <th>{{c.email}}</th>
+                    {% if c.CoverLetter %}
+                    <td><a href='{{c.CoverLetter.url}}' download >{{c.CoverLetter}}</td></a></td>
+                    {% else %}
+                    <td>Not submitted</td>
+                    {% endif %}
+
+                    {% if c.resume %}
+                    <td><a href='{{c.resume.url}}' download >{{c.resume}}</td></a></td>
+                    {% else %}
+                    <td>Not submitted</td>
+                    {% endif %}
+
+                    {% if c.phd %}
+                    <td><a href='{{c.phd.url}}' download >{{c.phd}}</td></a></td>
+                    {% else %}
+                    <td>Not submitted</td>
+                    {% endif %}
+
+                    {% if c.msc %}
+                    <td><a href='{{c.msc.url}}' download >{{c.msc}}</td></a></td>
+                    {% else %}
+                    <td>Not submitted</td>
+                    {% endif %}
+
+                    {% if c.bsc %}
+                    <td><a href='{{c.bsc.url}}' download >{{c.bsc}}</td></a></td>
+                    {% else %}
+                    <td>Not submitted</td>
+                    {% endif %}
+
+                    {% if c.od %}
+                    <td><a href='{{c.od.url}}' download >{{c.od}}</td></a></td>
+                    {% else %}
+                    <td>Not submitted</td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+{% endblock %}
