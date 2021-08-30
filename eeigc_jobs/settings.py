@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'vacancy.apps.VacancyConfig',
     'phonenumber_field',
-    'background_image',
+    #'background_image',
 ]
 
 MIDDLEWARE = [
