@@ -1,0 +1,407 @@
+{% extends 'vacancy/base.html' %}
+{% load static %}
+{% block title %} 
+<head>
+    <style>
+        .center{
+            border:1px solid white;
+            margin: auto;
+            width: 100%;
+            white-space: nowrap;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<div class="center">
+    <div class="site-logo">
+        <img src="static/img/eeigc.png" alt="logo">
+      </div>
+
+    <h1>Ethiopian Engineering and Inverstment Group (EEIG)</h1>
+    <h2>Geological and Geotechnical Engineering</h2>
+
+</div>
+{% endblock %} 
+{% block content %}
+<style>
+    body {
+        color: #57A0D3;
+    }
+</style>
+<div id="dvImage" style="height: 100vh; width: 100vw; display: block; object-fit: cover; padding:0; margin:0;">
+
+</div>
+<!-- CSS style to put div side by side -->
+<style type="text/css"> 
+.container {
+    width:1000px;
+    height:500px;
+    background-color:white;
+    padding-top:20px;
+    padding-left:15px;
+    padding-right:15px;
+}
+#st-box {
+    float:left;
+    width:400px;
+    height:400px;
+    background-color:white;
+    border:1px solid black;
+    
+}
+#nd-box {
+    float:left;
+    width:400px;
+    height:400px;
+    background-color:white; 
+    border:1px solid black;
+    margin-left:50px;
+}
+
+h1 {
+    color:#008ECC;
+}
+h2 {
+    color:#008ECC;
+}
+h3 {
+    color: #008ECC;
+}
+
+</style> 
+</head> 
+
+<body>
+<center> 
+<h1>About Our Sector</h1>
+  
+<div class="container">
+    <div id="nd-box" style="text-decoration: blue;">
+        <h3>About us</h3>
+        <p>
+            Ethiopian Construction Design & Supervision Works Corporation
+             is a fully integrated Engineering Consulting Firm giving consultancy 
+             services with six bussiness units in areas of Water and Energy, 
+             Building and Urban, Transport, Geotechnics and Underground Works which 
+             are supported by fully organized & dedicated two centers; One with 
+             advanced Laboratory & Research, the other with Surveying, Geospatial and 
+             Civil Informatics in search of excellence and quality. 
+             For ECDSWCo. excellence and qualities are more than rhetoric. 
+             It is our commitment to the creation of knowledge base and provision
+              of excelling & sustainable engineering solutions to the challenges
+               of our people and throughout Africa.
+        </p>
+    </div>    
+<div id="nd-box">
+    <style>
+        ol.a {
+            list-style-type: square;
+            text-align: left;
+        }
+        p.a {
+            text-align: left;
+        }
+    </style>
+    <h3>Overview</h3>
+ <p class="a">
+  Ethiopian Construction Design & Supervision Works Corporation is organized
+  in such a way that it enables to provides its clients a comprehensive range
+  of Engineering Services in the following business units:
+  <ol class="a">
+      <li>Water and Energy Sector</li>
+      <li>Transport Sector</li>
+      <li>Building and Urban Sector</li>
+      <li>Geo-technical Investigation, Geo-technical Engineering and Underground Construction Sector</li>
+      <li>Research, Laboratory and Training Center</li>
+      <li>Surveying, Geospatial and Civil Informatics Center</li>
+  </ol>
+</p>
+</div>
+        
+</div>
+</center>
+</body>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    var img = ["s5.jpg", "s2.jpg", "s3.jpg", "s4.jpg"];
+    $(function () {
+        var i = 0;
+        $("#dvImage").css("background-image", "url(static/img/" + img[i] + ")");
+        setInterval(function () {
+            i++;
+            if (i == img.length) {
+                i = 0;
+            }
+            $("#dvImage").fadeOut("slow", function () {
+                $(this).css("background-image", "url(static/img/" + img[i] + ")");
+                $(this).css("-webkit-background-size", "cover");
+                $(this).css("-moz-background-size", "cover");
+                $(this).css("-o-background-size", "cover");
+                $(this).css("background-size", "cover");
+                $(this).css("background-repeat", "no-repeat");
+                $(this).fadeIn("slow");
+            });
+        }, 7000);
+    });
+</script>
+
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+    
+    * {
+      font-family: Open Sans;
+    }
+    
+    section {
+      width: 100%;
+      display: inline-block;
+      background: #333;
+      height: 50vh;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+    
+    .footer-distributed{
+        background: #666;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+        box-sizing: border-box;
+        width: 100%;
+        text-align: left;
+        font: bold 16px sans-serif;
+        padding: 55px 50px;
+    }
+    
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    /* Footer left */
+    
+    .footer-distributed .footer-left{
+        width: 40%;
+    }
+    
+    /* The company logo */
+    
+    .footer-distributed h3{
+        color:  #ffffff;
+        font: normal 36px 'Open Sans', cursive;
+        margin: 0;
+    }
+    
+    .footer-distributed h3 span{
+        color:  lightseagreen;
+    }
+    
+    /* Footer links */
+    
+    .footer-distributed .footer-links{
+        color:  #ffffff;
+        margin: 20px 0 12px;
+        padding: 0;
+    }
+    
+    .footer-distributed .footer-links a{
+        display:inline-block;
+        line-height: 1.8;
+      font-weight:400;
+        text-decoration: none;
+        color:  inherit;
+    }
+    
+    .footer-distributed .footer-company-name{
+        color:  #222;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+    }
+    
+    /* Footer Center */
+    
+    .footer-distributed .footer-center{
+        width: 35%;
+    }
+    
+    .footer-distributed .footer-center i{
+        background-color:  #33383b;
+        color: #ffffff;
+        font-size: 25px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 42px;
+        margin: 10px 15px;
+        vertical-align: middle;
+    }
+    
+    .footer-distributed .footer-center i.fa-envelope{
+        font-size: 17px;
+        line-height: 38px;
+    }
+    
+    .footer-distributed .footer-center p{
+        display: inline-block;
+        color: #ffffff;
+      font-weight:400;
+        vertical-align: middle;
+        margin:0;
+    }
+    
+    .footer-distributed .footer-center p span{
+        display:block;
+        font-weight: normal;
+        font-size:14px;
+        line-height:2;
+    }
+    
+    .footer-distributed .footer-center p a{
+        color:  lightseagreen;
+        text-decoration: none;;
+    }
+    
+    .footer-distributed .footer-links a:before {
+      content: "|";
+      font-weight:300;
+      font-size: 20px;
+      left: 0;
+      color: #fff;
+      display: inline-block;
+      padding-right: 5px;
+    }
+    
+    .footer-distributed .footer-links .link-1:before {
+      content: none;
+    }
+    
+    /* Footer Right */
+    
+    .footer-distributed .footer-right{
+        width: 20%;
+    }
+    
+    .footer-distributed .footer-company-about{
+        line-height: 20px;
+        color:  white;
+        font-size: 13px;
+        font-weight: normal;
+        margin: 0;
+    }
+    
+    .footer-distributed .footer-company-about span{
+        display: block;
+        color:  #ffffff;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+    .footer-distributed .footer-icons{
+        margin-top: 25px;
+    }
+    
+    .footer-distributed .footer-icons a{
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        background-color:  #33383b;
+        border-radius: 2px;
+    
+        font-size: 20px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 35px;
+    
+        margin-right: 3px;
+        margin-bottom: 5px;
+    }
+    
+    /* If you don't want the footer to be responsive, remove these media queries */
+    
+    @media (max-width: 880px) {
+    
+        .footer-distributed{
+            font: bold 14px sans-serif;
+        }
+    
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right{
+            display: block;
+            width: 100%;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+    
+        .footer-distributed .footer-center i{
+            margin-left: 0;
+        }
+    
+    }
+    
+    </style>
+    <footer class="footer-distributed">
+    
+        <div class="footer-left">
+            <div class="site-logo">
+                <img src="static/img/eeigc.png" alt="logo">
+            </div>  
+            <p class="footer-links">
+                <a href="#" class="link-1">Home</a>
+                
+                <a href="#">Blog</a>
+            
+                <a href="#">Career</a>
+            
+                <a href="#">About</a>
+                
+                <a href="#">Faq</a>
+                
+                <a href="#">Contact</a>
+            </p>
+    
+            <p class="footer-company-name">Ethiopian Engineering and Inverstment Group © 2021</p>
+        </div>
+    
+        <div class="footer-center">
+    
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Address: </span> Near Emperial Hotel, Addis Ababa</p>
+            </div>
+    
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+251-11-661-4501 / +251-11-618-7443</p>
+            </div>
+    
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:info@ecdswc.com">info@ecdswc.com</a></p>
+            </div>
+    
+        </div>
+    
+        <div class="footer-right">
+    
+            <p class="footer-company-about">
+                <span>About the company</span>
+                EEIG's excellence and qualities are more than rhetoric. 
+                It is our commitment to the creation of knowledge base and provision of 
+                excelling & sustainable engineering solutions to the challenges of our 
+                people and throughout Africa.
+            </p>
+    
+        </div>
+    
+    </footer>
+{% endblock %}

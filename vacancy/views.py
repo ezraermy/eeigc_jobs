@@ -8,6 +8,16 @@ from .forms import *
 # Create your views here.
 
 def home(request):
+    employers = Employer.objects.all()
+    context={
+        'employers': employers,
+    }
+    return render(request, 'vacancy/home.html', context)
+
+def blog(request):
+    return render(request, 'vacancy/blog.html')
+
+def vacancy(request):
     if request.user.is_authenticated:
         employees=Employee.objects.filter(employer__name=request.user.username)
         context={
@@ -20,6 +30,15 @@ def home(request):
             'employers':employers,
         }
         return render(request,'vacancy/Openings.html',context)
+
+def about(request):
+    return render(request, 'vacancy/about.html')
+
+def faq(request):
+    return render(request, 'vacancy/faq.html') 
+
+def contact(request):
+    return render(request, 'vacancy/contact.html')
 
 
 def logoutUser(request):
