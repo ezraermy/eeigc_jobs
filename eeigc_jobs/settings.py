@@ -28,7 +28,11 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'uly&e&!_&$9%yab=^z29$6%kog#l(a
 #DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['127.0.0.1', 'eeigc-jobs.herokuapp.com', 'eeig.pythonanywhere.com']
+=======
+ALLOWED_HOSTS = ['127.0.0.1', 'eeig.pythonanywhere.com', 'eeigc-jobs.herokuapp.com']
+>>>>>>> d3e7ea3690f8597a6e469fc9a7a5810fba21e431
 
 
 # Application definition
